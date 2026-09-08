@@ -138,3 +138,69 @@ Available tenures:
 6 Months
 9 Months
 12 Months
+
+# Application Flow 
+
+             1Fi Marketplace
+                    │
+                    ▼
+             Product Listing
+                    │
+                    ▼
+             Product Details
+                    │
+          ┌─────────┴─────────┐
+          ▼                   ▼
+       Select Color      Select Storage
+          │                   │
+          └─────────┬─────────┘
+                    ▼
+             Variant Selected
+                    │
+                    ▼
+             Fetch EMI Plans
+                    │
+                    ▼
+             Select EMI Plan
+                    │
+                    ▼
+             Proceed to Order
+                    │
+                    ▼
+            Confirmation Page
+                    │
+                    ▼
+             Confirm Order
+                    │
+                    ▼
+             Order Confirmed
+
+  # Architecture Flow
+┌─────────────────────────────┐
+│       React Frontend        │
+│                             │
+│  Marketplace                │
+│  Product Details            │
+│  EMI Selection              │
+│  Confirmation                │
+└──────────────┬──────────────┘
+               │
+               │ HTTP / REST API
+               ▼
+┌─────────────────────────────┐
+│       Express Backend       │
+│                             │
+│  Product Routes             │
+│  Product Controller         │
+│  EMI Calculation            │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│       Product Data          │
+│                             │
+│  Products                   │
+│  Variants                   │
+│  Prices                     │
+│  Images                     │
+└─────────────────────────────┘
