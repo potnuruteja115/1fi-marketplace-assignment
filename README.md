@@ -1,76 +1,76 @@
-<p align="center">
-  <img src="client/src/assets/hero.png" alt="1Fi Marketplace Banner" width="100%">
-</p>
-
----
-
-<h1 align="center">1Fi MARKETPLACE</h1>
+# 💳 1Fi MARKETPLACE
 
 <p align="center">
-<b>SDE Intern Assignment • Full-Stack Marketplace Experience</b>
+  <b>Full-Stack Marketplace Experience with Dynamic EMI Selection</b>
 </p>
 
-A responsive marketplace experience built as part of the **1Fi SDE Intern Assignment**, featuring product discovery, product variants, dynamic pricing, EMI plan selection, and an end-to-end order confirmation flow.
-
----
+<p align="center">
+  SDE Intern Assignment • React • Node.js • Express.js • REST API
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/React-Frontend-61DAFB?style=for-the-badge&logo=react&logoColor=black">
+  <img src="https://img.shields.io/badge/Vite-Build_Tool-646CFF?style=for-the-badge&logo=vite&logoColor=white">
   <img src="https://img.shields.io/badge/Node.js-Backend-339933?style=for-the-badge&logo=node.js&logoColor=white">
   <img src="https://img.shields.io/badge/Express.js-REST_API-000000?style=for-the-badge&logo=express&logoColor=white">
-  <img src="https://img.shields.io/badge/Vite-Build_Tool-646CFF?style=for-the-badge&logo=vite&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/CSS-Responsive-1572B6?style=for-the-badge&logo=css3&logoColor=white">
   <img src="https://img.shields.io/badge/Git-GitHub-F05032?style=for-the-badge&logo=git&logoColor=white">
 </p>
 
 ---
 
-<h1 align="center">🛍️ 1Fi Marketplace</h1>
+## 📖 About the Project
 
-<p align="center">
-<b>Browse • Customize • Choose EMI • Confirm</b>
-</p>
+**1Fi Marketplace** is a full-stack marketplace experience developed as part of the **1Fi SDE Intern Assignment**.
+
+The application extends the Shop experience with a dedicated **1Fi Marketplace** section where users can browse products, view product details, select product variants, explore dynamically generated EMI plans, select an EMI option, and complete an order confirmation flow.
+
+The project follows a clean **client-server architecture**, separating the React frontend from the Node.js + Express.js backend.
+
+### High-Level Architecture
+
+```text
+                         1Fi MARKETPLACE
+                                │
+                                ▼
+                    ┌─────────────────────┐
+                    │    React Frontend   │
+                    └──────────┬──────────┘
+                               │
+                               │ REST API
+                               ▼
+                    ┌─────────────────────┐
+                    │   Express.js API    │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   Product / EMI     │
+                    │        Data         │
+                    └─────────────────────┘
+```
 
 ---
 
-# 💡 About This Project
+# 🎯 Assignment Objectives
 
-This project implements a **1Fi Marketplace** experience where users can browse products, view product details, select variants, explore dynamically generated EMI plans, and proceed through an order confirmation flow.
+The implementation focuses on:
 
-The application is designed with a clear separation between the **React frontend** and **Express.js backend**, with product and EMI data handled through REST APIs.
-
----
-
-# 🎯 Project Objectives
-
-- 🛍️ Build a functional marketplace experience
-- 📱 Display products with images and relevant details
-- 🎨 Support multiple product color variants
-- 💾 Support multiple storage variants
-- 💰 Display variant-specific pricing
-- 🧮 Generate EMI plans dynamically
-- 💳 Allow users to select an EMI plan
-- ✅ Provide an order confirmation flow
-- 🔄 Fetch application data through APIs
-- ⚡ Handle loading and error states
-- 📱 Build a responsive user interface
-- 🧩 Use reusable React components
-- 🏗️ Maintain clean frontend/backend separation
-
----
-
-# 🛠 Tech Stack
-
-<p align="center">
-
-<img src="https://skillicons.dev/icons?i=react,vite,nodejs,express,js,css,git,github,vscode"/>
-
-</p>
-
-<p align="center">
-
-React • Vite • JavaScript • Node.js • Express.js • REST APIs • CSS • Git • GitHub
-
-</p>
+- 🛍️ Building a functional marketplace experience
+- 📱 Displaying products with images and relevant information
+- 🎨 Supporting multiple product color variants
+- 💾 Supporting multiple storage variants
+- 💰 Displaying variant-specific pricing
+- 🧮 Generating EMI plans dynamically
+- 💳 Allowing users to select an EMI plan
+- ✅ Providing an order confirmation flow
+- 🔄 Fetching application data through REST APIs
+- ⏳ Handling loading states
+- ⚠️ Handling API/error states
+- 📱 Providing a responsive UI
+- 🧩 Building reusable React components
+- 🏗️ Maintaining frontend/backend separation
 
 ---
 
@@ -79,128 +79,1302 @@ React • Vite • JavaScript • Node.js • Express.js • REST APIs • CSS �
 ## 🛍️ 1Fi Marketplace
 
 - Product listing
+- Product cards
 - Product images
-- Product names
 - Brand information
 - Product descriptions
-- Pricing information
-- Multiple products
+- Selling price
+- MRP
+- Product details
+- Navigation to individual product pages
 
 ---
 
 ## 🎨 Product Variants
 
-Users can customize the selected product using:
+Products support dynamic variants based on:
 
-- Color
-- Storage capacity
-- Variant-specific images
-- Variant-specific pricing
-- MRP information
+### Color
 
----
-
-## 📱 Available Products
-
-### Apple iPhone 15
-
+**Apple iPhone 15**
 - Black
 - Blue
 - Pink
-- 128GB
-- 256GB
 
-### Samsung Galaxy S24
-
+**Samsung Galaxy S24**
 - Black
 - Violet
-- 128GB
-- 256GB
 
-### OnePlus 13
-
+**OnePlus 13**
 - Black Eclipse
 - Arctic Dawn
 - Midnight Ocean
+
+### Storage
+
 - 128GB
 - 256GB
 
+Selecting a variant dynamically updates:
+
+- Product image
+- Selling price
+- MRP
+- Selected color
+- Selected storage
+
 ---
 
-# 💳 EMI Plans
+# 📱 Available Products
 
-EMI plans are generated dynamically by the backend based on the selected product variant.
+| Product | Colors | Storage |
+|---|---|---|
+| Apple iPhone 15 | Black, Blue, Pink | 128GB, 256GB |
+| Samsung Galaxy S24 | Black, Violet | 128GB, 256GB |
+| OnePlus 13 | Black Eclipse, Arctic Dawn, Midnight Ocean | 128GB, 256GB |
 
-Available tenures:
+---
+
+# 💳 Dynamic EMI Plans
+
+EMI plans are generated by the backend according to the **selected product variant**.
+
+### Available Tenures
+
+| Tenure | Interest |
+|---|---:|
+| 3 Months | 0% |
+| 6 Months | 0% |
+| 9 Months | 0% |
+| 12 Months | 0% |
+
+For example:
 
 ```text
-3 Months
-6 Months
-9 Months
-12 Months
+Product Price = ₹64,999
 
-# Application Flow 
+3 Months  → ₹21,667 / month
+6 Months  → ₹10,833 / month
+9 Months  → ₹7,222 / month
+12 Months → ₹5,417 / month
+```
 
-             1Fi Marketplace
-                    │
-                    ▼
-             Product Listing
-                    │
-                    ▼
-             Product Details
-                    │
-          ┌─────────┴─────────┐
-          ▼                   ▼
-       Select Color      Select Storage
-          │                   │
-          └─────────┬─────────┘
-                    ▼
-             Variant Selected
-                    │
-                    ▼
-             Fetch EMI Plans
-                    │
-                    ▼
-             Select EMI Plan
-                    │
-                    ▼
-             Proceed to Order
-                    │
-                    ▼
-            Confirmation Page
-                    │
-                    ▼
-             Confirm Order
-                    │
-                    ▼
-             Order Confirmed
+The EMI plans are generated by the backend based on the selected variant price.
 
-  # Architecture Flow
-┌─────────────────────────────┐
-│       React Frontend        │
-│                             │
-│  Marketplace                │
-│  Product Details            │
-│  EMI Selection              │
-│  Confirmation                │
-└──────────────┬──────────────┘
-               │
-               │ HTTP / REST API
-               ▼
-┌─────────────────────────────┐
-│       Express Backend       │
-│                             │
-│  Product Routes             │
-│  Product Controller         │
-│  EMI Calculation            │
-└──────────────┬──────────────┘
-               │
-               ▼
-┌─────────────────────────────┐
-│       Product Data          │
-│                             │
-│  Products                   │
-│  Variants                   │
-│  Prices                     │
-│  Images                     │
-└─────────────────────────────┘
+---
+
+# 🏗️ System Architecture
+
+The application follows a layered client-server architecture.
+
+```text
+┌──────────────────────────────────────────────┐
+│                  USER / UI                   │
+└──────────────────────┬───────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────┐
+│              REACT FRONTEND                  │
+│                                              │
+│  Pages → Components → Hooks → API Services  │
+└──────────────────────┬───────────────────────┘
+                       │
+                       │ HTTP / REST
+                       ▼
+┌──────────────────────────────────────────────┐
+│             EXPRESS.JS BACKEND               │
+│                                              │
+│  Routes → Controllers → Product Data        │
+└──────────────────────┬───────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────┐
+│                DATA LAYER                    │
+│                                              │
+│             Product / Variant Data           │
+└──────────────────────────────────────────────┘
+```
+
+---
+
+# 🖥️ Frontend Architecture
+
+The frontend is built using **React + Vite**.
+
+```text
+client/
+│
+└── src/
+    │
+    ├── pages/
+    │   ├── MarketplacePage.jsx
+    │   ├── ProductPage.jsx
+    │   └── ConfirmationPage.jsx
+    │
+    ├── components/
+    │   ├── ProductCard.jsx
+    │   ├── EmiPlanCard.jsx
+    │   └── ShopTabs.jsx
+    │
+    ├── hooks/
+    │   └── useFetch.js
+    │
+    ├── services/
+    │   └── api.js
+    │
+    ├── App.jsx
+    ├── App.css
+    ├── index.css
+    └── main.jsx
+```
+
+### Frontend Responsibilities
+
+The frontend handles:
+
+- Page navigation
+- Product rendering
+- Variant selection
+- EMI selection
+- API communication
+- Loading states
+- Error states
+- Confirmation UI
+- Responsive layout
+
+---
+
+# ⚙️ Backend Architecture
+
+The backend uses **Node.js + Express.js**.
+
+```text
+server/
+│
+├── controllers/
+│   └── productController.js
+│
+├── routes/
+│   └── productRoutes.js
+│
+├── seed/
+│   └── products.js
+│
+└── server.js
+```
+
+### Backend Responsibilities
+
+The backend handles:
+
+- Product retrieval
+- Product lookup
+- Variant lookup
+- EMI generation
+- API responses
+- Error responses
+
+---
+
+# 🔌 API Architecture
+
+```text
+                    React Component
+                           │
+                           ▼
+                    API Service
+                       api.js
+                           │
+                           ▼
+                   Express REST API
+                           │
+                           ▼
+                       Routes
+                           │
+                           ▼
+                     Controllers
+                           │
+                           ▼
+                     Product Data
+                           │
+                           ▼
+                    JSON Response
+                           │
+                           ▼
+                    React Component
+```
+
+This separation prevents UI components from directly handling backend implementation details.
+
+---
+
+# 📊 Data Architecture
+
+Product information is maintained in the backend data layer.
+
+```text
+Product
+│
+├── id
+├── brand
+├── name
+├── description
+├── images
+└── variants
+     │
+     ├── color
+     ├── storage
+     ├── price
+     ├── mrp
+     └── image
+```
+
+### Example
+
+```text
+OnePlus 13
+│
+├── Black Eclipse
+│   ├── 128GB → ₹64,999
+│   └── 256GB → ₹69,999
+│
+├── Arctic Dawn
+│   ├── 128GB → ₹65,999
+│   └── 256GB → ₹70,999
+│
+└── Midnight Ocean
+    ├── 128GB → ₹66,999
+    └── 256GB → ₹71,999
+```
+
+The UI consumes this data through the API rather than embedding product information directly inside presentation components.
+
+---
+
+# 🔄 Complete Application Workflow
+
+## 1. Shop Navigation Flow
+
+```text
+                    Shop
+                      │
+          ┌───────────┼───────────┐
+          ▼           ▼           ▼
+     Top Brands   Nearby Stores   1Fi Marketplace
+       │              │                │
+    Placeholder    Placeholder         ▼
+                                  Marketplace
+```
+
+| Shop Section | Status |
+|---|---|
+| Top Brands | Placeholder |
+| Nearby Stores | Placeholder |
+| 1Fi Marketplace | Fully Implemented |
+
+---
+
+# 🛍️ 2. Marketplace Flow
+
+```text
+User opens Marketplace
+          │
+          ▼
+GET /api/products
+          │
+          ▼
+Backend returns products
+          │
+          ▼
+React receives product data
+          │
+          ▼
+Product cards are rendered
+          │
+          ▼
+User selects a product
+          │
+          ▼
+Navigate to Product Page
+```
+
+---
+
+# 📱 3. Product Detail Flow
+
+```text
+                 Product Page
+                      │
+                      ▼
+              Load Product Data
+                      │
+                      ▼
+              Display Information
+                      │
+          ┌───────────┴───────────┐
+          ▼                       ▼
+    Select Color           Select Storage
+          │                       │
+          └───────────┬───────────┘
+                      ▼
+                Find Variant
+                      │
+                      ▼
+          Update Image + Price + MRP
+```
+
+---
+
+# 🎨 4. Variant Selection Flow
+
+```text
+User selects Color
+        │
+        ▼
+User selects Storage
+        │
+        ▼
+Find matching variant
+        │
+        ▼
+┌─────────────────────────┐
+│ Update Product Image    │
+│ Update Selling Price    │
+│ Update MRP              │
+│ Update Variant Details  │
+└─────────────────────────┘
+```
+
+### Example
+
+```text
+Color   = Black Eclipse
+Storage = 128GB
+
+        ↓
+
+Matching Variant
+
+        ↓
+
+Price = ₹64,999
+```
+
+Changing the storage:
+
+```text
+Color   = Black Eclipse
+Storage = 256GB
+
+        ↓
+
+Matching Variant
+
+        ↓
+
+Price = ₹69,999
+```
+
+---
+
+# 💳 5. EMI Workflow
+
+After selecting a product variant:
+
+```text
+Selected Variant
+      │
+      ▼
+Product ID
++
+Color
++
+Storage
+      │
+      ▼
+GET /api/products/:id/emi-plans
+      │
+      ▼
+Backend finds matching variant
+      │
+      ▼
+Backend calculates EMI
+      │
+      ▼
+EMI Plans returned
+      │
+      ▼
+React renders EMI cards
+      │
+      ▼
+User selects EMI plan
+```
+
+---
+
+# 🧮 6. EMI Calculation Flow
+
+```text
+Selected Product Variant
+          │
+          ▼
+     Variant Price
+          │
+          ▼
+   Available Tenures
+    3 / 6 / 9 / 12
+          │
+          ▼
+   Monthly EMI Amount
+          │
+          ▼
+      EMI Response
+          │
+          ▼
+     EMI Plan Cards
+```
+
+For a product priced at ₹64,999:
+
+```text
+3 Months  → ₹21,667 / month
+6 Months  → ₹10,833 / month
+9 Months  → ₹7,222 / month
+12 Months → ₹5,417 / month
+```
+
+---
+
+# ✅ 7. Order Confirmation Flow
+
+```text
+User selects EMI
+       │
+       ▼
+Proceed to Confirmation
+       │
+       ▼
+Confirmation Page
+       │
+       ├── Product
+       ├── Brand
+       ├── Color
+       ├── Storage
+       ├── Product Price
+       ├── EMI Tenure
+       ├── Monthly EMI
+       └── Interest
+       │
+       ▼
+Confirm & Proceed
+       │
+       ▼
+Order Confirmed
+```
+
+---
+
+# 🔁 Complete End-to-End Workflow
+
+```text
+┌────────────────────┐
+│     Shop Page      │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│ 1Fi Marketplace    │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│  Product Listing   │
+└─────────┬──────────┘
+          │
+          │ GET /api/products
+          ▼
+┌────────────────────┐
+│  Product Details   │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│ Select Color &     │
+│ Storage            │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│ Active Variant     │
+│ Image + Price + MRP│
+└─────────┬──────────┘
+          │
+          │ GET EMI API
+          ▼
+┌────────────────────┐
+│     EMI Plans      │
+│ 3 / 6 / 9 / 12 Mo.│
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│ Select EMI Plan    │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│ Confirmation Page  │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│ Order Confirmed ✓  │
+└────────────────────┘
+```
+
+---
+
+# 🔌 API Request / Response Flow
+
+## Product Listing
+
+```text
+Frontend
+   │
+   │ GET /api/products
+   ▼
+Express Route
+   │
+   ▼
+getProducts()
+   │
+   ▼
+Product Data
+   │
+   ▼
+JSON Response
+   │
+   ▼
+Frontend
+   │
+   ▼
+Product Cards
+```
+
+---
+
+## Product Details
+
+```text
+Frontend
+   │
+   │ GET /api/products/:id
+   ▼
+Express Route
+   │
+   ▼
+getProductById()
+   │
+   ▼
+Find Product
+   │
+   ▼
+JSON Response
+   │
+   ▼
+Product Page
+```
+
+---
+
+## EMI Plans
+
+```text
+Frontend
+   │
+   │ Product ID
+   │ Color
+   │ Storage
+   ▼
+GET /api/products/:id/emi-plans
+   │
+   ▼
+Express Route
+   │
+   ▼
+Controller
+   │
+   ▼
+Find Product
+   │
+   ▼
+Find Matching Variant
+   │
+   ▼
+Calculate EMI
+   │
+   ▼
+Return EMI Plans
+   │
+   ▼
+Frontend
+   │
+   ▼
+EmiPlanCard
+```
+
+---
+
+# 🔌 REST API Endpoints
+
+### Get All Products
+
+```http
+GET /api/products
+```
+
+Returns the available marketplace products.
+
+---
+
+### Get Product by ID
+
+```http
+GET /api/products/:id
+```
+
+Returns details for a specific product.
+
+Example:
+
+```http
+GET /api/products/oneplus-13
+```
+
+---
+
+### Get EMI Plans
+
+```http
+GET /api/products/:id/emi-plans
+```
+
+The endpoint accepts:
+
+- Product ID
+- Color
+- Storage
+
+Example:
+
+```http
+GET /api/products/oneplus-13/emi-plans?color=Black%20Eclipse&storage=128GB
+```
+
+---
+
+# 🧠 State Management Flow
+
+The application uses React state and hooks for local UI state.
+
+```text
+                    React State
+                        │
+       ┌────────────────┼────────────────┐
+       ▼                ▼                ▼
+ Selected Color    Selected Storage   Selected EMI
+       │                │                │
+       └────────────────┼────────────────┘
+                        ▼
+                 Selected Variant
+                        │
+                        ▼
+                Updated Product UI
+```
+
+### API State
+
+The reusable `useFetch` hook manages:
+
+- Loading
+- Data
+- Error
+
+```text
+API Request
+    │
+    ▼
+Loading = true
+    │
+    ├──────────────────┐
+    ▼                  ▼
+ Success             Failure
+    │                  │
+    ▼                  ▼
+  Data                Error
+    │                  │
+    ▼                  ▼
+ Render UI         Error Message
+```
+
+---
+
+# 🧩 Component Architecture
+
+The frontend follows a reusable component-based architecture.
+
+```text
+App
+│
+├── MarketplacePage
+│   │
+│   ├── ShopTabs
+│   │
+│   └── ProductCard
+│
+├── ProductPage
+│   │
+│   └── EmiPlanCard
+│
+└── ConfirmationPage
+```
+
+### `ShopTabs`
+
+Handles navigation between:
+
+```text
+Top Brands
+Nearby Stores
+1Fi Marketplace
+```
+
+### `ProductCard`
+
+Responsible for displaying:
+
+- Product image
+- Brand
+- Product name
+- Description
+- Selling price
+- MRP
+- Variant information
+
+### `EmiPlanCard`
+
+Responsible for displaying:
+
+- EMI tenure
+- Monthly EMI
+- Interest rate
+- Selected state
+
+### `useFetch`
+
+A reusable custom hook responsible for:
+
+- API loading state
+- API response data
+- API error state
+
+---
+
+# 📂 Repository Structure
+
+```text
+1fi-marketplace-assignment/
+│
+├── client/
+│   │
+│   ├── src/
+│   │   │
+│   │   ├── assets/
+│   │   │
+│   │   ├── components/
+│   │   │   ├── EmiPlanCard.jsx
+│   │   │   ├── ProductCard.jsx
+│   │   │   └── ShopTabs.jsx
+│   │   │
+│   │   ├── hooks/
+│   │   │   └── useFetch.js
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── MarketplacePage.jsx
+│   │   │   ├── ProductPage.jsx
+│   │   │   └── ConfirmationPage.jsx
+│   │   │
+│   │   ├── services/
+│   │   │   └── api.js
+│   │   │
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   ├── index.css
+│   │   └── main.jsx
+│   │
+│   └── package.json
+│
+├── server/
+│   │
+│   ├── controllers/
+│   │   └── productController.js
+│   │
+│   ├── routes/
+│   │   └── productRoutes.js
+│   │
+│   ├── seed/
+│   │   └── products.js
+│   │
+│   ├── server.js
+│   └── package.json
+│
+├── .gitignore
+├── README.md
+└── package.json
+```
+
+---
+
+# ⏳ Loading & Error Handling
+
+API operations follow an explicit state flow:
+
+```text
+              API Request
+                   │
+                   ▼
+                Loading
+                   │
+          ┌────────┴────────┐
+          ▼                 ▼
+       Success             Error
+          │                 │
+          ▼                 ▼
+      Render Data      Show Error
+```
+
+This prevents the UI from appearing broken while data is being fetched.
+
+---
+
+# 📱 Responsive Design
+
+The UI adapts to different screen sizes.
+
+```text
+Desktop
+   │
+   ├── Multi-column Product Grid
+   ├── Two-column Product Details
+   └── Multi-column EMI Plans
+
+Tablet
+   │
+   ├── Reduced Product Grid
+   └── Adaptive Product Details
+
+Mobile
+   │
+   ├── Single-column Product Grid
+   ├── Stacked Product Details
+   ├── Single-column EMI Plans
+   └── Full-width Actions
+```
+
+Responsive behavior includes:
+
+- Adaptive product grid
+- Responsive product detail layout
+- Responsive EMI cards
+- Mobile-friendly navigation
+- Flexible confirmation layout
+- Touch-friendly buttons
+
+---
+
+# 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React | Frontend UI |
+| Vite | Frontend build/development |
+| JavaScript | Application logic |
+| CSS | Styling and responsive design |
+| Node.js | Backend runtime |
+| Express.js | REST API |
+| REST API | Frontend/backend communication |
+| Git | Version control |
+| GitHub | Repository hosting |
+
+---
+
+# 🚀 Getting Started
+
+## 1. Clone the Repository
+
+```bash
+git clone https://github.com/potnuruteja115/1fi-marketplace-assignment.git
+```
+
+```bash
+cd 1fi-marketplace-assignment
+```
+
+---
+
+# 📦 Backend Setup
+
+Navigate to the server:
+
+```bash
+cd server
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the backend:
+
+```bash
+npm start
+```
+
+The backend API runs on:
+
+```text
+http://localhost:5000
+```
+
+---
+
+# 💻 Frontend Setup
+
+Open another terminal.
+
+Navigate to the client:
+
+```bash
+cd client
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the frontend:
+
+```bash
+npm run dev
+```
+
+Vite will provide the local development URL.
+
+---
+
+# 🧪 API Testing
+
+The APIs can be tested using:
+
+- Browser
+- Postman
+- Thunder Client
+- cURL
+
+### Product API
+
+```http
+GET http://localhost:5000/api/products
+```
+
+### EMI API
+
+```http
+GET http://localhost:5000/api/products/oneplus-13/emi-plans?color=Black%20Eclipse&storage=128GB
+```
+
+---
+
+# 🧪 Application Testing
+
+The following flows have been tested:
+
+- Product listing
+- Product navigation
+- Product details
+- Color selection
+- Storage selection
+- Variant-specific pricing
+- Variant-specific images
+- EMI API
+- EMI selection
+- Confirmation page
+- Order success state
+- Loading state
+- Error state
+- Responsive layouts
+
+---
+
+# 🏪 Shop Sections
+
+The Shop experience contains three sections:
+
+| Section | Status |
+|---|---|
+| Top Brands | Placeholder |
+| Nearby Stores | Placeholder |
+| 1Fi Marketplace | Fully Implemented |
+
+The **1Fi Marketplace** is the primary implemented section for this assignment.
+
+---
+
+# ⚙️ Engineering Practices
+
+The project follows practical software engineering principles.
+
+### Separation of Concerns
+
+Frontend UI, API communication, backend routes, controllers, and data are separated.
+
+### Reusable Components
+
+Common UI elements are extracted into reusable React components.
+
+### API-Driven Data
+
+Product and EMI information are obtained through backend APIs.
+
+### Dynamic Variant Handling
+
+Color and storage selections determine the active product variant.
+
+### Backend-Driven EMI
+
+EMI plans are generated by the backend according to the selected variant price.
+
+### Explicit State Handling
+
+Loading, success, and error states are handled explicitly.
+
+### Responsive UI
+
+The interface adapts to desktop, tablet, and mobile layouts.
+
+---
+
+# 🔐 Authentication & Authorization
+
+Authentication and authorization are **not required for the current assignment scope**.
+
+The current application focuses on the marketplace browsing, variant selection, EMI selection, and order confirmation workflow.
+
+Authentication can be added later if user accounts or protected order management are introduced.
+
+---
+
+# 📦 Deliverables
+
+- ✅ 1Fi Marketplace UI
+- ✅ Product listing
+- ✅ Product detail page
+- ✅ Product variants
+- ✅ Dynamic pricing
+- ✅ Dynamic EMI generation
+- ✅ EMI selection
+- ✅ Order confirmation flow
+- ✅ REST API
+- ✅ Loading states
+- ✅ Error handling
+- ✅ Responsive UI
+- ✅ Reusable React components
+- ✅ Git/GitHub repository
+- ✅ Project documentation
+
+---
+
+# 🔮 Future Improvements
+
+The architecture can be extended with:
+
+- 🔐 User authentication
+- 👤 User profiles
+- 🛒 Shopping cart
+- 💳 Real payment integration
+- 🧾 Order history
+- 🗄️ Database integration
+- 🔎 Product search
+- 🔃 Product filtering and sorting
+- 📄 Pagination
+- 📍 Nearby store integration
+- 🏷️ Top Brands integration
+- 👨‍💼 Admin dashboard
+- ☁️ Cloud deployment
+- 📊 Analytics and monitoring
+
+---
+
+# 📊 Architecture Summary
+
+```text
+                              USER
+                                │
+                                ▼
+                         ┌────────────┐
+                         │ Shop Page  │
+                         └─────┬──────┘
+                               │
+                               ▼
+                    ┌────────────────────┐
+                    │ 1Fi Marketplace    │
+                    └─────────┬──────────┘
+                              │
+                              ▼
+                    ┌────────────────────┐
+                    │ Product Listing    │
+                    └─────────┬──────────┘
+                              │
+                              │ API
+                              ▼
+                    ┌────────────────────┐
+                    │ Express Backend    │
+                    └─────────┬──────────┘
+                              │
+                              ▼
+                       Product Data
+                              │
+                              ▼
+                    ┌────────────────────┐
+                    │ Product Details    │
+                    └─────────┬──────────┘
+                              │
+                              ▼
+                    ┌────────────────────┐
+                    │ Color + Storage    │
+                    └─────────┬──────────┘
+                              │
+                              ▼
+                    ┌────────────────────┐
+                    │ Selected Variant   │
+                    └─────────┬──────────┘
+                              │
+                              ▼
+                    ┌────────────────────┐
+                    │    EMI API         │
+                    └─────────┬──────────┘
+                              │
+                              ▼
+                    ┌────────────────────┐
+                    │   EMI Selection    │
+                    └─────────┬──────────┘
+                              │
+                              ▼
+                    ┌────────────────────┐
+                    │ Confirmation Page  │
+                    └─────────┬──────────┘
+                              │
+                              ▼
+                    ┌────────────────────┐
+                    │ Order Confirmed ✓  │
+                    └────────────────────┘
+```
+
+---
+
+# ⭐ Project Highlights
+
+### Complete User Journey
+
+```text
+Product Discovery
+       ↓
+Product Selection
+       ↓
+Variant Selection
+       ↓
+Dynamic Pricing
+       ↓
+EMI Generation
+       ↓
+EMI Selection
+       ↓
+Order Confirmation
+       ↓
+Success
+```
+
+### Complete Technical Flow
+
+```text
+React UI
+   ↓
+React Router
+   ↓
+Reusable Components
+   ↓
+API Service
+   ↓
+REST API
+   ↓
+Express Routes
+   ↓
+Controllers
+   ↓
+Product Data
+   ↓
+JSON Response
+   ↓
+React State
+   ↓
+Updated UI
+```
+
+---
+
+# 🎓 What This Project Demonstrates
+
+This project demonstrates practical understanding of:
+
+- React component architecture
+- React Router
+- React Hooks
+- Custom Hooks
+- REST API integration
+- Express.js routing
+- Controller-based backend structure
+- Dynamic data handling
+- Product variant management
+- State management
+- Responsive CSS
+- Loading and error handling
+- Frontend/backend separation
+- Git and GitHub workflow
+
+---
+
+# 👨‍💻 Author
+
+**Teja Potnuru**
+
+SDE Intern Assignment — 1Fi Marketplace
+
+---
+
+# 📄 License
+
+This project was developed as part of the **1Fi SDE Intern Assignment** and is intended for evaluation and demonstration purposes.
+
+---
+
+<p align="center">
+  <b>Built with React, Node.js & Express.js</b>
+</p>
+
+<p align="center">
+  <i>Browse • Customize • Choose EMI • Confirm</i>
+</p>
